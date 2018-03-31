@@ -42,13 +42,11 @@ class Unlocked_turnstile_state(Turnstile_state):
         t.lock()
         
 
-
 class Turnstile(object):
     locked_state = Locked_turnstile_state()
     unlocked_state = Unlocked_turnstile_state()
     turnstile_controller = Turnstile_controller()
-    def __init__(self ): #можт надо добавит tutnslitecontroller
-        #self.turnstile_controller: = t        
+    def __init__(self ):         
         self.state = self.locked_state
 
     def coin(self)->None:
